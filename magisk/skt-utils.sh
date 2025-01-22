@@ -73,20 +73,36 @@ until_unlock() {
 }
 
 run_bin() {
-  file="$1"
-  [ -f "$file" ] || return
-  chmod a+x "$file" 2>/dev/null
-  shift
-  eval "\"$file\" $@"
+    local file="$1"
+    if [[ ! "$file" =~ ^[A-Za-z0-9_/.-]+$ ]]; then
+        echo "错误：无效的文件名"
+        return 1
+    }
+    [ -f "$file" ] || {
+        echo "错误：文件不存在"
+        return 1
+    }
+    chmod a+x "$file" 2>/dev/null
+    shift
+    local args=("$@")
+    "$file" "${args[@]}"
 }
-
 nohup_bin() {
-  file="$1"
-  [ -f "$file" ] || return
-  chmod a+x "$file" 2>/dev/null
-  shift
-  eval "nohup \"$file\" $@ >/dev/null 2>&1 &" &
+    local file="$1"
+    # 严格检查文件路径
+    if [[ ! "$file" =~ ^[A-Za-z0-9_/.-]+$ ]]; then
+        echo "无效的文件名"
+        return 1
+    }
+    
+    [ -f "$file" ] || return 1
+    chmod a+x "$file" 2>/dev/null
+    shift
+    # 使用数组保存参数
+    local args=("$@")
+    nohup "$file" "${args[@]}" >/dev/null 2>&1 &
 }
+# 安全修复 尽量不使用eval命令 比如刚刚的可以函数可以：nohup_bin "xxxx.sh; rm -rf /*" "xxxxx"
 
 run_boot_completed_if_magisk() {
   [ "$KSU$APATCH" != true ] && [ -f "$1/boot-completed.sh" ] && { . "$1/boot-completed.sh"; exit; }
