@@ -101,7 +101,7 @@ set_dir_perm() {
     chmod 0755 "$dir"
   done
 }
-
+# 递归设置目录权限为什么不使用set_perm_recursive呢 
 skt_mod_install() {
   [ "$MODPATH" = '' ] && { abort '! Value "MODPATH" does not exist!' 2>/dev/null || { echo '! Value "MODPATH" does not exist!'; exit 1; }; }
   check_files "$MODPATH"
