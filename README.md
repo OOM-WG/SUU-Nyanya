@@ -23,13 +23,13 @@
 
 1. 下载最新版本的 [SUU APP](https://github.com/YumeYuka/Suu-Nyanya/releases/latest)
 2. 解压缩文件并将其放置在设备的合适位置
-3. 安装APP
+3. 安装 APP
 3. 根据需要编辑配置文件
-4. ~~选择Magisk/KernelSU/APatch输入模块安装~~
+4. ~~选择 Magisk/KernelSU/APatch 输入模块安装~~
 5. 重启设备
 
 > [!WARNING]
-> 现阶段建议使用APP,模块因一些原因重构不再更新
+> 现阶段建议使用 APP,模块因一些原因重构不再更新
 
 ## 👩‍💻 作者
 
@@ -42,7 +42,8 @@
 
 **File to Download Public Resources License (F2DLPRL or F2DLPR License)**
 
-**OFFICIAL WEBSITE:** [http://license.fileto.download](http://license.fileto.download)  
+**OFFICIAL WEBSITE:** [http://license.fileto.download](http://license.fileto.download)
+
 *IN CASE OF DISCREPANCIES, THE OFFICIAL WEBSITE SHALL PREVAIL.*
 
 ### Terms and conditions for use, reproduction and redistribution:
@@ -77,7 +78,7 @@
 
 ---
 
-**THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
-**  
+**THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.** 
+
 **IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY NEGATIVE IMPACT, BUT ONLY FOR POSITIVE
 IMPACT, WHETHER OR NOT THEY HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.**
